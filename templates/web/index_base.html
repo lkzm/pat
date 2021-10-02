@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>{% block title %} Pat {% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'web/index_base/assets/css/main.css' %}" />
+        <link rel="icon" type="image/svg+xml" href="{% static 'web/favicon.svg' %}">
+
+    </head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				{% block header %}
+                    <h1>Pat Project</h1>
+				<h2>Pat First Token</h2>
+                    <p>Economic Experiment</p>
+                    <p>Contract Address: 0x75e9f87fc4ea12233957b3d4da053d47faac3558</p>
+				{% endblock %}
+			</header>
+
+
+        {% block form %}
+            whatever
+
+        {% endblock %}
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+
+                                        <li><a href="https://discord.gg/vUHTDwND" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+                                        <li><a href="https://t.me/joinchat/YORoji1RcBBiMmQx" class="icon brands fa-telegram"><span class="label">Telegram</span></a></li>
+
+                    <li><a href="" class="icon brands fa-reddit"><span class="label">Reddit</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; PatProject.</li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script>
+                                var settings = {
+
+                                        // Images (in the format of 'url': 'alignment').
+                                                images: {
+                                                        "{% static 'web/index_base/backgrounds/bg01.jpeg' %}" : 'center',
+                                                        "{% static 'web/index_base/backgrounds/bg02.jpeg' %}" :'center',
+                                                        "{% static 'web/index_base/backgrounds/bg03.jpeg' %}" : 'center',
+                                                        "{% static 'web/index_base/backgrounds/bg04.jpeg' %}" : 'center',
+                                                        "{% static 'web/index_base/backgrounds/bg05.jpeg' %}" : 'center',
+
+
+							                    },
+
+                                        // Delay.
+                                                delay: 6000
+
+                                };
+                        </script>
+			<script src="{% static 'web/index_base/assets/js/main.js' %}"></script>
+
+
+
+	</body>
+</html>
+
