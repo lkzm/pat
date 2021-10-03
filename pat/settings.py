@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'pat.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pat',
+        'USER': 'patft',
+        'PASSWORD': 'pRPasdas%6',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

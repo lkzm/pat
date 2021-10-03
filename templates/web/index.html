@@ -1,9 +1,16 @@
 {% extends 'web/index_base.html' %}
 {% load static %}
 {% block title %}
-Pat Project
+{{ title }}
 {% endblock %}
+{% block header %}
+{% for x in content %}
+    <h1> x.h1 </h1>
+    <h2> x.h2 </h2>
+    <p> x.text </p>
+{% endfor %}
 
+{% endblock %}
  {% block form %}
 
          <p><input type="button" onclick="window.open('https://poocoin.app/tokens/0x75e9f87fc4ea12233957b3d4da053d47faac3558' , '_blank')" value="Chart" class="primary"/>
