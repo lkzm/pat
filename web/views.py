@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from web import models
 def index (request):
-    page = models.Page.get(name = 'cs')
+    page = models.Page.objects.get(name = 'cs')
     content = models.Content.objects.filter(page__pk = page.pk)
 
     context = {
