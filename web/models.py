@@ -12,3 +12,18 @@ class Content (models.Model):
     h1 = models.CharField(max_length=255, blank=True)
     h2 = models.CharField(max_length=255, blank=True)
     text = models.TextField(max_length=2048, blank=True)
+
+
+class Background (models.Model):
+    img = models.ImageField(upload_to='files/backgrounds/')
+
+
+
+class Social (models.Model):
+    url = models.URLField()
+    html = models.CharField(blank=False, unique=True, max_length= 255)
+
+class UToken (models.Model):
+    url = models.URLField()
+    name = models.CharField(blank=False, max_length=255)
+

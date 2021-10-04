@@ -12,13 +12,22 @@
 
 {% endblock %}
  {% block form %}
-
-         <p><input type="button" onclick="window.open('https://poocoin.app/tokens/0x75e9f87fc4ea12233957b3d4da053d47faac3558' , '_blank')" value="Chart" class="primary"/>
-         <input type="button" onclick="window.open('https://pancakeswap.finance/swap#/swap?outputCurrency=0x75e9f87fc4ea12233957b3d4da053d47faac3558' , '_blank')" value="Buy" class="primary" /></p>
-
-
-
+     <p>
+     {% for x in ut %}
+     <input type="button" onclick="window.open('{{ x.url }}', '_blank')" value="{{ x.name }}" class="primary"/>
+     {% endfor %}
 
  {% endblock %}
+{% block socials %}
+{% for x in socials %}
+<li><a href="{{ x.url }}" class="icon brands fa-{{ x.html }}"><span class="label">{{ x.name }}</span></a></li>
+{% endfor %}
+{% endblock %}
+{% block bg %}
+    {% for x in bg %}
+    "{{ x.img.url }}": 'center',
+    {% endfor %}
+{% endblock %}
+
 
 
