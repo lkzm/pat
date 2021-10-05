@@ -24,9 +24,19 @@
 {% endfor %}
 {% endblock %}
 {% block bg %}
+     var settings = {
+
+                                        // Images (in the format of 'url': 'alignment').
+                                                images: {
     {% for x in bg %}
     "{{ x.img.url }}": 'center',
     {% endfor %}
+    },
+
+                                        // Delay.
+                                                delay: 6000
+
+                                };
 {% endblock %}
 
 

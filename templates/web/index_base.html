@@ -45,11 +45,12 @@
 
 		<!-- Scripts -->
 			<script>
+                {% block bg %}
                                 var settings = {
 
                                         // Images (in the format of 'url': 'alignment').
                                                 images: {
-                                {% block bg %}
+
                                                         "{% static 'web/index_base/backgrounds/bg01.jpeg' %}" : 'center',
                                                         "{% static 'web/index_base/backgrounds/bg02.jpeg' %}" :'center',
                                                         "{% static 'web/index_base/backgrounds/bg03.jpeg' %}" : 'center',
@@ -58,11 +59,12 @@
 
 
 							                    },
-                                {% endblock %}
+
                                         // Delay.
                                                 delay: 6000
 
                                 };
+                {% endblock %}
                         </script>
 			<script src="{% static 'web/index_base/assets/js/main.js' %}"></script>
 
