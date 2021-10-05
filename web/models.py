@@ -22,6 +22,7 @@ class Background (models.Model):
 class Social (models.Model):
     url = models.URLField()
     html = models.CharField(blank=False, unique=True, max_length= 255)
+    name = models.CharField(blank=False, max_length=255)
 
 class UToken (models.Model):
     url = models.URLField()
